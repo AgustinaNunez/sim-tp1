@@ -4,13 +4,15 @@
  * and open the template in the editor.
  */
 
-package PtoB;
+package PtoC;
+
+import PtoB.*;
 
 /**
  *
  * @author a3
  */
-public class TestDeChiCuadrado extends javax.swing.JFrame {
+public class TestChiCuadradoMixto extends javax.swing.JFrame {
 
     private int intervalo;
     private int nivelConfianza;
@@ -18,7 +20,7 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
     /**
      * Creates new form TestDeChiCuadrado
      */
-    public TestDeChiCuadrado() {
+    public TestChiCuadradoMixto() {
         initComponents();
         this.setLocationRelativeTo(null);
         this.setTitle("Test de Chi Cuadrado");
@@ -35,32 +37,26 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         Rbtn10 = new javax.swing.JRadioButton();
         RBtn50 = new javax.swing.JRadioButton();
         RBtn100 = new javax.swing.JRadioButton();
         jLabel3 = new javax.swing.JLabel();
-        TxtCantValores = new javax.swing.JTextField();
+        txt_cantValores = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         RBtn95 = new javax.swing.JRadioButton();
         RBtn99 = new javax.swing.JRadioButton();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        BtnGenerar = new javax.swing.JToggleButton();
+        btn_generar = new javax.swing.JToggleButton();
+        jLabel7 = new javax.swing.JLabel();
 
-        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setResizable(false);
 
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(0, 102, 153));
-        jLabel2.setText("Test De ChiCuadrado");
-
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel1.setText("Cant. intervalos");
+        jLabel1.setText("K =");
+        jLabel1.setToolTipText("Número de intervalos");
 
         Rbtn10.setBackground(new java.awt.Color(255, 255, 255));
         Rbtn10.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
@@ -94,10 +90,12 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Cant. valores a generar");
+        jLabel3.setText("M =");
+        jLabel3.setToolTipText("Cantidad de valores a generar");
 
-        TxtCantValores.setBackground(new java.awt.Color(229, 229, 229));
-        TxtCantValores.setForeground(new java.awt.Color(0, 0, 0));
+        txt_cantValores.setBackground(new java.awt.Color(255, 255, 255));
+        txt_cantValores.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txt_cantValores.setForeground(new java.awt.Color(0, 0, 0));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
@@ -123,77 +121,59 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
             }
         });
 
-        jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel5.setText("Frecuencia Esperada");
-
-        jLabel6.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel6.setText("Frecuencia Observadas");
-
-        jTextField1.setBackground(new java.awt.Color(229, 229, 229));
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField1.setText("jTextField1");
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
+        btn_generar.setBackground(new java.awt.Color(242, 242, 242));
+        btn_generar.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        btn_generar.setText("Generar");
+        btn_generar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
+                btn_generarActionPerformed(evt);
             }
         });
 
-        BtnGenerar.setBackground(new java.awt.Color(242, 242, 242));
-        BtnGenerar.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        BtnGenerar.setText("Generar");
-        BtnGenerar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                BtnGenerarActionPerformed(evt);
-            }
-        });
+        jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
+        jLabel7.setForeground(new java.awt.Color(0, 102, 153));
+        jLabel7.setText("Test de Chi Cuadrado _ Generador Mixto");
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
+                .addGap(25, 25, 25)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel3)
+                    .addComponent(jLabel1)
+                    .addComponent(jLabel4))
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(25, 25, 25)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(BtnGenerar, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                        .addComponent(jLabel3)
-                                        .addComponent(jLabel1)
-                                        .addComponent(jLabel4))
-                                    .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel6, javax.swing.GroupLayout.Alignment.TRAILING))
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(RBtn95)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(RBtn99))
-                                    .addGroup(jPanel2Layout.createSequentialGroup()
-                                        .addComponent(Rbtn10)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(RBtn50)
-                                        .addGap(18, 18, 18)
-                                        .addComponent(RBtn100))
-                                    .addComponent(TxtCantValores, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(108, 108, 108))))
+                        .addComponent(RBtn95)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(RBtn99)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                        .addComponent(btn_generar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(16, 16, 16)
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 231, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(20, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(txt_cantValores, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(Rbtn10)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RBtn50)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RBtn100)))
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
+            .addGroup(jPanel2Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel7)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(16, 16, 16)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 20, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(26, 26, 26)
+                .addGap(12, 12, 12)
+                .addComponent(jLabel7)
+                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(Rbtn10)
@@ -202,21 +182,14 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
                 .addGap(5, 5, 5)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel3)
-                    .addComponent(TxtCantValores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(txt_cantValores, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(RBtn95)
-                    .addComponent(RBtn99))
-                .addGap(18, 18, 18)
-                .addComponent(BtnGenerar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel5)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addContainerGap(54, Short.MAX_VALUE))
+                    .addComponent(RBtn99)
+                    .addComponent(btn_generar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(15, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -229,7 +202,9 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -250,22 +225,13 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void RBtn95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBtn95ActionPerformed
-        RBtn99.setSelected(false);
-    }//GEN-LAST:event_RBtn95ActionPerformed
-
-    private void Rbtn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rbtn10ActionPerformed
-        RBtn50.setSelected(false);
-        RBtn100.setSelected(false);
-    }//GEN-LAST:event_Rbtn10ActionPerformed
-
-    private void BtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGenerarActionPerformed
-        int cantNros = Integer.parseInt(TxtCantValores.getText());
-        generadorDeRandom r= new generadorDeRandom(cantNros);
+    private void btn_generarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_generarActionPerformed
+        int cantNros = Integer.parseInt(txt_cantValores.getText());
+        GeneradorRND r= new GeneradorRND(cantNros);
         for (int i = 0; i < cantNros; i++) {
-             System.out.println(r.getRandom());
+            System.out.println(r.getRandom());
         }
-       
+
         if(Rbtn10.isSelected()==true){
             this.intervalo=10;
         }if (RBtn50.isSelected()==true){
@@ -276,28 +242,33 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
         if (RBtn95.isSelected()==true){
             this.nivelConfianza=95;
         }else
-            this.nivelConfianza=99;
-     
-        System.exit(0);
-    }//GEN-LAST:event_BtnGenerarActionPerformed
+        this.nivelConfianza=99;
 
-    private void RBtn50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBtn50ActionPerformed
-        Rbtn10.setSelected(false);
-        RBtn100.setSelected(false);
-    }//GEN-LAST:event_RBtn50ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_btn_generarActionPerformed
+
+    private void RBtn99ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBtn99ActionPerformed
+        RBtn95.setSelected(false);
+    }//GEN-LAST:event_RBtn99ActionPerformed
+
+    private void RBtn95ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBtn95ActionPerformed
+        RBtn99.setSelected(false);
+    }//GEN-LAST:event_RBtn95ActionPerformed
 
     private void RBtn100ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBtn100ActionPerformed
         Rbtn10.setSelected(false);
         RBtn50.setSelected(false);
     }//GEN-LAST:event_RBtn100ActionPerformed
 
-    private void RBtn99ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBtn99ActionPerformed
-       RBtn95.setSelected(false);
-    }//GEN-LAST:event_RBtn99ActionPerformed
+    private void RBtn50ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RBtn50ActionPerformed
+        Rbtn10.setSelected(false);
+        RBtn100.setSelected(false);
+    }//GEN-LAST:event_RBtn50ActionPerformed
 
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-      
-    }//GEN-LAST:event_jTextField1ActionPerformed
+    private void Rbtn10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Rbtn10ActionPerformed
+        RBtn50.setSelected(false);
+        RBtn100.setSelected(false);
+    }//GEN-LAST:event_Rbtn10ActionPerformed
 
    
     /**
@@ -317,40 +288,40 @@ public class TestDeChiCuadrado extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(TestDeChiCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestChiCuadradoMixto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(TestDeChiCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestChiCuadradoMixto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(TestDeChiCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestChiCuadradoMixto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(TestDeChiCuadrado.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(TestChiCuadradoMixto.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        //</editor-fold>
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new TestDeChiCuadrado().setVisible(true);
+                new TestChiCuadradoMixto().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JToggleButton BtnGenerar;
     private javax.swing.JRadioButton RBtn100;
     private javax.swing.JRadioButton RBtn50;
     private javax.swing.JRadioButton RBtn95;
     private javax.swing.JRadioButton RBtn99;
     private javax.swing.JRadioButton Rbtn10;
-    private javax.swing.JTextField TxtCantValores;
+    private javax.swing.JToggleButton btn_generar;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField txt_cantValores;
     // End of variables declaration//GEN-END:variables
 }

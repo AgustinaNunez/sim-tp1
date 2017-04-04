@@ -5,7 +5,6 @@ import java.awt.event.KeyEvent;
 import java.text.DecimalFormat;
 import javax.swing.table.DefaultTableModel;
 import org.jfree.ui.RefineryUtilities;
-import PantallaPrincipal.Menu;
 import javax.swing.JOptionPane;
 import static javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE;
 import javax.swing.table.DefaultTableModel;
@@ -58,8 +57,6 @@ public class Mixto extends javax.swing.JDialog {
         panel_info = new javax.swing.JPanel();
         lbl_info = new javax.swing.JLabel();
         lbl_infoN = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Metodos Congruenciales");
@@ -312,20 +309,6 @@ public class Mixto extends javax.swing.JDialog {
         lbl_infoN.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
         lbl_infoN.setText("lbl_info");
 
-        jButton1.setText("Salir");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
-
-        jButton2.setText("Volver");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -342,11 +325,7 @@ public class Mixto extends javax.swing.JDialog {
                                 .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(panel_info, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addGap(30, 30, 30)
-                                .addComponent(jButton1)
-                                .addGap(39, 39, 39)
-                                .addComponent(jButton2)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGap(197, 197, 197)
                                 .addComponent(lbl_infoN, javax.swing.GroupLayout.DEFAULT_SIZE, 113, Short.MAX_VALUE))))
                     .addComponent(jlblPuntoA))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -365,13 +344,8 @@ public class Mixto extends javax.swing.JDialog {
                         .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(panel_info, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(lbl_infoN, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(jButton1)
-                                .addGap(11, 11, 11))
-                            .addComponent(jButton2))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 90, Short.MAX_VALUE)
+                        .addComponent(lbl_infoN)))
                 .addContainerGap())
         );
 
@@ -670,18 +644,6 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private void jtxtMFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxtMFocusGained
         this.hideMessage();
     }//GEN-LAST:event_jtxtMFocusGained
-
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
-     this.dispose();
-    Menu m = new Menu();
-    m.setVisible(true);
-    }//GEN-LAST:event_jButton2ActionPerformed
-
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        if (JOptionPane.showConfirmDialog(rootPane, "¿Desea realmente salir del sistema?",
-                "Salir del sistema", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
-            System.exit(0);
-    }//GEN-LAST:event_jButton1ActionPerformed
     public static void main(String args[]) {
         /*
          * Set the Nimbus look and feel
@@ -731,8 +693,6 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.ButtonGroup btnGroupMetodos;
     private javax.swing.JButton jBtnSig;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
