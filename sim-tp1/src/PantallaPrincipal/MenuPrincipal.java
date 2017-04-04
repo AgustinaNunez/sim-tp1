@@ -1,23 +1,14 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package PantallaPrincipal;
 
 import PtoA.Menu;
 
-/**
- *
- * @author Gonzalo Rivas
- */
 public class MenuPrincipal extends javax.swing.JFrame {
 
     /**
      * Creates new form MenuPrincipal
      */
     public MenuPrincipal() {
-       initComponents();
+        initComponents();
         this.setTitle("Menú Principal");
         this.setLocationRelativeTo(null);
     }
@@ -33,9 +24,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jButton1 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
+        btn_A = new javax.swing.JButton();
+        btn_B = new javax.swing.JButton();
+        btn_C = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -45,33 +36,33 @@ public class MenuPrincipal extends javax.swing.JFrame {
         jLabel1.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N
         jLabel1.setText("Generación de números aleatorios");
 
-        jButton1.setBackground(new java.awt.Color(242, 242, 242));
-        jButton1.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jButton1.setText("Generadores Congruenciales");
-        jButton1.setToolTipText("Punto A");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        btn_A.setBackground(new java.awt.Color(242, 242, 242));
+        btn_A.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        btn_A.setText("Generadores Congruenciales");
+        btn_A.setToolTipText("Punto A");
+        btn_A.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                btn_AActionPerformed(evt);
             }
         });
 
-        jButton5.setBackground(new java.awt.Color(242, 242, 242));
-        jButton5.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jButton5.setText("Test Chi Cuadrado - RND");
-        jButton5.setToolTipText("Punto B");
-        jButton5.addActionListener(new java.awt.event.ActionListener() {
+        btn_B.setBackground(new java.awt.Color(242, 242, 242));
+        btn_B.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        btn_B.setText("Test Chi Cuadrado - RND");
+        btn_B.setToolTipText("Punto B");
+        btn_B.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton5ActionPerformed(evt);
+                btn_BActionPerformed(evt);
             }
         });
 
-        jButton4.setBackground(new java.awt.Color(242, 242, 242));
-        jButton4.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        jButton4.setText("Test Chi Cuadrado - Mixto");
-        jButton4.setToolTipText("Punto C");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
+        btn_C.setBackground(new java.awt.Color(242, 242, 242));
+        btn_C.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        btn_C.setText("Test Chi Cuadrado - Mixto");
+        btn_C.setToolTipText("Punto C");
+        btn_C.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
+                btn_CActionPerformed(evt);
             }
         });
 
@@ -86,9 +77,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(79, 79, 79)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(btn_B, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_C, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_A, javax.swing.GroupLayout.PREFERRED_SIZE, 204, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
@@ -97,11 +88,11 @@ public class MenuPrincipal extends javax.swing.JFrame {
                 .addContainerGap()
                 .addComponent(jLabel1)
                 .addGap(18, 18, 18)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_A, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_B, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(btn_C, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(19, Short.MAX_VALUE))
         );
 
@@ -119,21 +110,20 @@ public class MenuPrincipal extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton4ActionPerformed
+    private void btn_CActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_CActionPerformed
+        PtoC.TestChiCuadradoMixto vC = new PtoC.TestChiCuadradoMixto();
+        vC.setVisible(true);
+    }//GEN-LAST:event_btn_CActionPerformed
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-       
-        Menu m = new Menu();
-        m.setVisible(true);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void btn_AActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_AActionPerformed
+        Menu vA = new Menu();
+        vA.setVisible(true);
+    }//GEN-LAST:event_btn_AActionPerformed
 
-    private void jButton5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton5ActionPerformed
-       
-        PtoB.TestChiCuadradoRND m = new PtoB.TestChiCuadradoRND();
-        m.setVisible(true);
-    }//GEN-LAST:event_jButton5ActionPerformed
+    private void btn_BActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_BActionPerformed
+        PtoB.TestChiCuadradoRND vB = new PtoB.TestChiCuadradoRND();
+        vB.setVisible(true);
+    }//GEN-LAST:event_btn_BActionPerformed
 
     /**
      * @param args the command line arguments
@@ -172,9 +162,9 @@ public class MenuPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
+    private javax.swing.JButton btn_A;
+    private javax.swing.JButton btn_B;
+    private javax.swing.JButton btn_C;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     // End of variables declaration//GEN-END:variables

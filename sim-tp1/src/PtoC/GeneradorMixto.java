@@ -11,7 +11,9 @@ public class GeneradorMixto {
     
     public String getRandom() {
          DecimalFormat truncado = new DecimalFormat("0.0000"); 
-//         double r= (Math.random() * rango) + 1;
-//         return truncado.format(r);
+         double r= (Math.random() * rango) + 1;
+         return truncado.format(r);
     }
+    
+    
 }

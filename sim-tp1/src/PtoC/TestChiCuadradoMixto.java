@@ -48,6 +48,12 @@ public class TestChiCuadradoMixto extends javax.swing.JFrame {
         RBtn99 = new javax.swing.JRadioButton();
         btn_generar = new javax.swing.JToggleButton();
         jLabel7 = new javax.swing.JLabel();
+        jlblSemilla = new javax.swing.JLabel();
+        txt_semilla = new javax.swing.JTextField();
+        jlblA = new javax.swing.JLabel();
+        jtxtA = new javax.swing.JTextField();
+        jlblC = new javax.swing.JLabel();
+        jtxtC = new javax.swing.JTextField();
 
         setResizable(false);
 
@@ -134,39 +140,102 @@ public class TestChiCuadradoMixto extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 102, 153));
         jLabel7.setText("Test de Chi Cuadrado _ Generador Mixto");
 
+        jlblSemilla.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jlblSemilla.setText("Semilla =");
+
+        txt_semilla.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        txt_semilla.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                txt_semillaFocusGained(evt);
+            }
+        });
+        txt_semilla.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyPressed(java.awt.event.KeyEvent evt) {
+                txt_semillaKeyPressed(evt);
+            }
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                txt_semillaKeyTyped(evt);
+            }
+        });
+
+        jlblA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jlblA.setText("a =");
+
+        jtxtA.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jtxtA.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jtxtAFocusGained(evt);
+            }
+        });
+        jtxtA.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtAKeyTyped(evt);
+            }
+        });
+
+        jlblC.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jlblC.setText("c =");
+
+        jtxtC.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jtxtC.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                jtxtCFocusGained(evt);
+            }
+        });
+        jtxtC.addKeyListener(new java.awt.event.KeyAdapter() {
+            public void keyTyped(java.awt.event.KeyEvent evt) {
+                jtxtCKeyTyped(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel4))
-                .addGap(18, 18, 18)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(RBtn95)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(RBtn99)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
-                        .addComponent(btn_generar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(25, 25, 25)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel3)
+                            .addComponent(jLabel1)
+                            .addComponent(jLabel4))
+                        .addGap(18, 18, 18)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(RBtn95)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(RBtn99)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 77, Short.MAX_VALUE)
+                                .addComponent(btn_generar, javax.swing.GroupLayout.PREFERRED_SIZE, 131, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_cantValores, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addGroup(jPanel2Layout.createSequentialGroup()
+                                        .addComponent(Rbtn10)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(RBtn50)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                        .addComponent(RBtn100)))
+                                .addGap(0, 0, Short.MAX_VALUE))))
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(txt_cantValores, javax.swing.GroupLayout.PREFERRED_SIZE, 135, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(jPanel2Layout.createSequentialGroup()
-                                .addComponent(Rbtn10)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RBtn50)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(RBtn100)))
+                                .addContainerGap()
+                                .addComponent(jLabel7))
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addGap(91, 91, 91)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jlblSemilla)
+                                    .addComponent(jlblC)
+                                    .addComponent(jlblA))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(jtxtC, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jtxtA, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(txt_semilla, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 75, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
-            .addGroup(jPanel2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel7)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -174,6 +243,18 @@ public class TestChiCuadradoMixto extends javax.swing.JFrame {
                 .addGap(12, 12, 12)
                 .addComponent(jLabel7)
                 .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlblSemilla)
+                    .addComponent(txt_semilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(13, 13, 13)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jtxtA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jlblA))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jlblC)
+                    .addComponent(jtxtC, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(Rbtn10)
@@ -189,7 +270,7 @@ public class TestChiCuadradoMixto extends javax.swing.JFrame {
                     .addComponent(RBtn95)
                     .addComponent(RBtn99)
                     .addComponent(btn_generar, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(15, Short.MAX_VALUE))
+                .addContainerGap(19, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
@@ -270,6 +351,75 @@ public class TestChiCuadradoMixto extends javax.swing.JFrame {
         RBtn100.setSelected(false);
     }//GEN-LAST:event_Rbtn10ActionPerformed
 
+    private void txt_semillaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_semillaFocusGained
+//        this.hideMessage();
+    }//GEN-LAST:event_txt_semillaFocusGained
+
+    private void txt_semillaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_semillaKeyPressed
+//        this.hideMessage();
+    }//GEN-LAST:event_txt_semillaKeyPressed
+
+    private void txt_semillaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_semillaKeyTyped
+//        int k = (int) evt.getKeyChar();//k = al valor de la tecla presionada
+//
+//        if (k >= 97 && k <= 122 || k >= 65 && k <= 90) {    // Si el caracter ingresado es una letra
+//            evt.setKeyChar((char) KeyEvent.VK_CLEAR);       // Limpiar el caracter ingresado
+//            showMessage("No puede ingresar letras!!!");
+//        }
+//
+//        if (k == 241 || k == 209) {                         // Si el caracter ingresado es una letra
+//            evt.setKeyChar((char) KeyEvent.VK_CLEAR);       // Limpiar el caracter ingresado
+//            showMessage("No puede ingresar letras!!!");
+//        }
+//
+//        if (k == 10) {                                      // si se presiona enter
+//            txt_semilla.transferFocus();                    //transfiere el foco
+//        }
+    }//GEN-LAST:event_txt_semillaKeyTyped
+
+    private void jtxtAFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxtAFocusGained
+//        this.hideMessage();
+    }//GEN-LAST:event_jtxtAFocusGained
+
+    private void jtxtAKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtAKeyTyped
+//        int k = (int) evt.getKeyChar();                     // k = al valor de la tecla presionada
+//
+//        if (k >= 97 && k <= 122 || k >= 65 && k <= 90) {    // Si el caracter ingresado es una letra
+//            evt.setKeyChar((char) KeyEvent.VK_CLEAR);       // Limpiar el caracter ingresado
+//            showMessage("No puede ingresar letras!!!");
+//        }
+//
+//        if (k == 241 || k == 209) {                         // Si el caracter ingresado es una letra
+//            showMessage("No puede ingresar letras!!!");
+//        }
+//
+//        if (k == 10) {  // si se presiona enter
+//            jtxtA.transferFocus();                          // transfiere el foco
+//        }
+    }//GEN-LAST:event_jtxtAKeyTyped
+
+    private void jtxtCFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxtCFocusGained
+//        this.hideMessage();
+    }//GEN-LAST:event_jtxtCFocusGained
+
+    private void jtxtCKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jtxtCKeyTyped
+//        int k = (int) evt.getKeyChar();                     // k = al valor de la tecla presionada
+//
+//        if (k >= 97 && k <= 122 || k >= 65 && k <= 90) {    // Si el caracter ingresado es una letra
+//            evt.setKeyChar((char) KeyEvent.VK_CLEAR);       // Limpiar el caracter ingresado
+//            showMessage("No puede ingresar letras!!!");
+//        }
+//
+//        if (k == 241 || k == 209) {                         // Si el caracter ingresado es una letra
+//            evt.setKeyChar((char) KeyEvent.VK_CLEAR);       // Limpiar el caracter ingresado
+//            showMessage("No puede ingresar letras!!!");
+//        }
+//
+//        if (k == 10) {                                      // si se presiona enter
+//            jtxtC.transferFocus();                          //transfiere el foco
+//        }
+    }//GEN-LAST:event_jtxtCKeyTyped
+
    
     /**
      * @param args the command line arguments
@@ -322,6 +472,12 @@ public class TestChiCuadradoMixto extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JLabel jlblA;
+    private javax.swing.JLabel jlblC;
+    private javax.swing.JLabel jlblSemilla;
+    private javax.swing.JTextField jtxtA;
+    private javax.swing.JTextField jtxtC;
     private javax.swing.JTextField txt_cantValores;
+    private javax.swing.JTextField txt_semilla;
     // End of variables declaration//GEN-END:variables
 }

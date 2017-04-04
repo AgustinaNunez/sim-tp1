@@ -51,9 +51,9 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Component id="jButton5" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
-                              <Component id="jButton4" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
-                              <Component id="jButton1" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
+                              <Component id="btn_B" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
+                              <Component id="btn_C" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
+                              <Component id="btn_A" alignment="0" min="-2" pref="204" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                   </Group>
@@ -67,11 +67,11 @@
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="18" max="-2" attributes="0"/>
-                  <Component id="jButton1" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="btn_A" min="-2" pref="40" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton5" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="btn_B" min="-2" pref="40" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
-                  <Component id="jButton4" min="-2" pref="40" max="-2" attributes="0"/>
+                  <Component id="btn_C" min="-2" pref="40" max="-2" attributes="0"/>
                   <EmptySpace pref="19" max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -86,7 +86,7 @@
             <Property name="text" type="java.lang.String" value="Generaci&#xf3;n de n&#xfa;meros aleatorios"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton1">
+        <Component class="javax.swing.JButton" name="btn_A">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f2" green="f2" red="f2" type="rgb"/>
@@ -98,10 +98,10 @@
             <Property name="toolTipText" type="java.lang.String" value="Punto A"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton1ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_AActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton5">
+        <Component class="javax.swing.JButton" name="btn_B">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f2" green="f2" red="f2" type="rgb"/>
@@ -113,10 +113,10 @@
             <Property name="toolTipText" type="java.lang.String" value="Punto B"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton5ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_BActionPerformed"/>
           </Events>
         </Component>
-        <Component class="javax.swing.JButton" name="jButton4">
+        <Component class="javax.swing.JButton" name="btn_C">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
               <Color blue="f2" green="f2" red="f2" type="rgb"/>
@@ -128,7 +128,7 @@
             <Property name="toolTipText" type="java.lang.String" value="Punto C"/>
           </Properties>
           <Events>
-            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton4ActionPerformed"/>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btn_CActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
