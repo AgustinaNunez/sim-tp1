@@ -39,6 +39,7 @@ public class Multiplicativo extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Metodos Congruenciales");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -57,6 +58,7 @@ public class Multiplicativo extends javax.swing.JDialog {
         });
 
         jtxtM.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jtxtM.setNextFocusableComponent(jbtnGenerar);
         jtxtM.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyTyped(java.awt.event.KeyEvent evt) {
                 jtxtMKeyTyped(evt);

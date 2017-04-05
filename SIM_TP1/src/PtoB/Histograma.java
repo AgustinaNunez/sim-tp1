@@ -26,7 +26,6 @@ public class Histograma extends ApplicationFrame {
         JPanel chartPanel = crearPanel();
         chartPanel.setPreferredSize(new java.awt.Dimension(500, 475));
         setContentPane(chartPanel);
-        setDefaultCloseOperation(DISPOSE_ON_CLOSE);
     }
 
     private static IntervalXYDataset crearDataset() {

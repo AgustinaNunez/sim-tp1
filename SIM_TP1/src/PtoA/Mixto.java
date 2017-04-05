@@ -40,7 +40,7 @@ public class Mixto extends javax.swing.JDialog {
         jTabla = new javax.swing.JTable();
         jPanel2 = new javax.swing.JPanel();
         jlblSemilla = new javax.swing.JLabel();
-        txt_semilla = new javax.swing.JTextField();
+        jTxtSemilla = new javax.swing.JTextField();
         jtxtM = new javax.swing.JTextField();
         jlblM = new javax.swing.JLabel();
         jtxtC = new javax.swing.JTextField();
@@ -60,6 +60,7 @@ public class Mixto extends javax.swing.JDialog {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         setTitle("Metodos Congruenciales");
+        setResizable(false);
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
 
@@ -84,19 +85,19 @@ public class Mixto extends javax.swing.JDialog {
         jlblSemilla.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
         jlblSemilla.setText("Semilla =");
 
-        txt_semilla.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
-        txt_semilla.setNextFocusableComponent(jtxtA);
-        txt_semilla.addFocusListener(new java.awt.event.FocusAdapter() {
+        jTxtSemilla.setFont(new java.awt.Font("Segoe UI", 0, 13)); // NOI18N
+        jTxtSemilla.setNextFocusableComponent(jtxtA);
+        jTxtSemilla.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
-                txt_semillaFocusGained(evt);
+                jTxtSemillaFocusGained(evt);
             }
         });
-        txt_semilla.addKeyListener(new java.awt.event.KeyAdapter() {
+        jTxtSemilla.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyPressed(java.awt.event.KeyEvent evt) {
-                txt_semillaKeyPressed(evt);
+                jTxtSemillaKeyPressed(evt);
             }
             public void keyTyped(java.awt.event.KeyEvent evt) {
-                txt_semillaKeyTyped(evt);
+                jTxtSemillaKeyTyped(evt);
             }
         });
 
@@ -194,7 +195,7 @@ public class Mixto extends javax.swing.JDialog {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
                     .addComponent(jtxtC, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 75, Short.MAX_VALUE)
                     .addComponent(jtxtA, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(txt_semilla, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jTxtSemilla, javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jtxtM))
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -215,7 +216,7 @@ public class Mixto extends javax.swing.JDialog {
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jlblSemilla)
-                            .addComponent(txt_semilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jTxtSemilla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(13, 13, 13)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(jtxtA, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -379,7 +380,7 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     try {
         // aca capturamos los datos que nos pasan por pantalla 
         double a = Double.valueOf(jtxtA.getText());
-        double x0 = Double.valueOf(txt_semilla.getText());
+        double x0 = Double.valueOf(jTxtSemilla.getText());
         double m = Double.valueOf(jtxtM.getText());
 
         double x2;
@@ -439,7 +440,7 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         jtxtA.setText(null);
         jtxtC.setText(null);
         jtxtM.setText(null);
-        txt_semilla.setText(null);
+        jTxtSemilla.setText(null);
         int numDatos = datos.getRowCount();
         for (int i = 0; i < numDatos; i++) {
             datos.removeRow(0);
@@ -461,7 +462,7 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         try{
 
         double a = Double.valueOf(jtxtA.getText());
-        double x0 = Double.valueOf(txt_semilla.getText());
+        double x0 = Double.valueOf(jTxtSemilla.getText());
         double m = Double.valueOf(jtxtM.getText());
         double c = Double.valueOf(jtxtC.getText());
 
@@ -506,7 +507,7 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         try {
             // aca capturamos los datos que nos pasan por pantalla 
             double a = Double.valueOf(jtxtA.getText());
-            double x0 = Double.valueOf(txt_semilla.getText());
+            double x0 = Double.valueOf(jTxtSemilla.getText());
             double m = Double.valueOf(jtxtM.getText());
             double x2;
             String aux = "";
@@ -611,7 +612,7 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     }//GEN-LAST:event_jtxtMKeyTyped
 
     //Validacion de datos del raiz 
-    private void txt_semillaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_semillaKeyTyped
+    private void jTxtSemillaKeyTyped(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtSemillaKeyTyped
         int k = (int) evt.getKeyChar();//k = al valor de la tecla presionada
 
         if (k >= 97 && k <= 122 || k >= 65 && k <= 90) {    // Si el caracter ingresado es una letra
@@ -625,17 +626,17 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
         }
 
         if (k == 10) {                                      // si se presiona enter
-            txt_semilla.transferFocus();                    //transfiere el foco
+            jTxtSemilla.transferFocus();                    //transfiere el foco
         }
-    }//GEN-LAST:event_txt_semillaKeyTyped
+    }//GEN-LAST:event_jTxtSemillaKeyTyped
 
-    private void txt_semillaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_txt_semillaFocusGained
+    private void jTxtSemillaFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jTxtSemillaFocusGained
         this.hideMessage();
-    }//GEN-LAST:event_txt_semillaFocusGained
+    }//GEN-LAST:event_jTxtSemillaFocusGained
 
-    private void txt_semillaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_txt_semillaKeyPressed
+    private void jTxtSemillaKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_jTxtSemillaKeyPressed
         this.hideMessage();
-    }//GEN-LAST:event_txt_semillaKeyPressed
+    }//GEN-LAST:event_jTxtSemillaKeyPressed
 
     private void jtxtAFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_jtxtAFocusGained
         this.hideMessage();
@@ -703,6 +704,7 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTable jTabla;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTxtSemilla;
     private javax.swing.JButton jbtnGenerar;
     private javax.swing.JButton jbtnLimpiar;
     private javax.swing.JButton jbtnLimpiar1;
@@ -718,6 +720,5 @@ private void jbtnGenerarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-F
     private javax.swing.JLabel lbl_info;
     private javax.swing.JLabel lbl_infoN;
     private javax.swing.JPanel panel_info;
-    private javax.swing.JTextField txt_semilla;
     // End of variables declaration//GEN-END:variables
 }
