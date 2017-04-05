@@ -1,5 +1,5 @@
 # sim-tp1
-## Generación de números aleatorios
+# Generación de números aleatorios
 
 a) Realizar un programa de genere una serie de 20 números aleatorios entre 0 y 9999 (4 dígitos) a partir de un valor numérico indicado como raíz, utilizando los métodos congruenciales mixto y multiplicativo. Las constantes a utilizar por los métodos deben ser ingresadas por el usuario.
 Una vez que se listan los 20 números, debe permitir seguir la serie de a un valor por vez.
